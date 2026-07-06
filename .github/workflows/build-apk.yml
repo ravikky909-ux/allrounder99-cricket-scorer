@@ -79,8 +79,10 @@ jobs:
           </vector>
           EOF
 
+          cp android/app/src/main/res/drawable/a99_launcher.xml android/app/src/main/res/drawable/a99_launcher_round.xml
+
           sed -i 's/@mipmap\/ic_launcher/@drawable\/a99_launcher/g' android/app/src/main/AndroidManifest.xml
-          sed -i 's/@mipmap\/ic_launcher_round/@drawable\/a99_launcher/g' android/app/src/main/AndroidManifest.xml
+          sed -i 's/@mipmap\/ic_launcher_round/@drawable\/a99_launcher_round/g' android/app/src/main/AndroidManifest.xml
 
       - name: Build debug APK
         run: |
